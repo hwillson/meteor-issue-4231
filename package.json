@@ -1,0 +1,12 @@
+{
+  "name": "meteor-issue-4231",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "babel-runtime": "6.18.0",
+    "chance": "^1.0.4",
+    "meteor-node-stubs": "~0.2.0"
+  }
+}

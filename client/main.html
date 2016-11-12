@@ -1,0 +1,46 @@
+<head>
+  <title>meteor-issue-4231</title>
+</head>
+
+<body>
+  <div class="container">
+    {{> messagesNew}}
+  </div>
+</body>
+
+<template name="messagesNew">
+  <form>
+    <div class="form-group">
+      <label for="message-new-text">Text message</label>
+      <small class="pull-right" id="message-new-text-length"></small>
+      <textarea id="message-new-text" class="form-control" placeholder="Lorem ipsum"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Queries</label>
+      <button class="btn btn-default query-add">
+        <span class="glyphicon glyphicon-plus"></span>
+        Add
+      </button>
+    </div>
+
+    <div class="form-group">
+      {{#each queries}}
+        DEBUG: {{id}}
+        <div class="panel panel-default">
+          <div class="panel-title">
+            <div>
+              <span class="pull-right query-remove">
+                <button class="btn btn-danger btn-xs btn-remove" id="query-remove-{{id}}" data-id="{{id}}">
+                  <span class="glyphicon glyphicon-remove disabled" style="margin-top: 3px;"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div class="panel-body">
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </form>
+</template>
